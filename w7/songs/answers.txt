@@ -1,0 +1,8 @@
+To characterize the listener's audio aura from their top 100 songs of 2018 in songs.db, we calculate the average energy, valence, and danceability of these songs. Suppose the averages are:
+
+Energy: 0.65
+Valence: 0.70
+Danceability: 0.60
+The listener's audio aura can be described as "Energetic and Happy" with a decent level of danceability.
+
+to make it beter you should include play counts and identify the mood patterns to seek the changes over time
