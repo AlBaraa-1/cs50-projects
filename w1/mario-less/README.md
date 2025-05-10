@@ -10,6 +10,12 @@ This program recreates the half-pyramid from the game **Super Mario Bros.**, whe
 
 ### Example Output (height = 4):
 
+```
+   #
+  ##
+ ###
+####
+```
 
 ---
 
@@ -30,10 +36,39 @@ If you're using the CS50 IDE or a terminal with `make` installed:
 ```bash
 make mario
 ./mario
+```
 
-Sample Run:
+### Sample Run:
+
+```bash
 Height: 4
    #
   ##
  ###
 ####
+```
+
+---
+
+## 🧠 Concepts Practiced
+
+- `do-while` input validation
+- `for` loops and nested loops
+- Right-aligned formatting
+- Basic user input with `get_int()`
+
+---
+
+## 📌 Notes
+
+- This solution follows the **less comfortable** version of the Mario pyramid assignment.
+- Completed as part of **Harvard's CS50x – Introduction to Computer Science (2024)**.
+- More info: [Problem Link](https://cs50.harvard.edu/x/2024/psets/1/mario/less/)
+
+---
+
+## 🎓 Credit
+
+Course: [CS50x – Harvard University](https://cs50.harvard.edu/x/)  
+Instructor: David J. Malan  
+Student: AlBaraa Mohammad AlOlabi
