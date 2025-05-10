@@ -1,116 +1,97 @@
-# 🗃️ SQL Projects – CS50x 2024
+# 🎬 Movies – CS50x Problem Set 7
 
-This repository contains my solutions to the **SQL-based problem sets** from [CS50x 2024 – Weeks 7 & 8](https://cs50.harvard.edu/x/2024/), including analysis of songs and movies using relational databases.
-
----
-
-## 📁 Projects Included
-
-| Project | Description |
-|--------|-------------|
-| 🎧 **Songs** | Analyze musical preferences and moods from a top-100 songs dataset |
-| 🎥 **Movies** | Explore a rich movie database to answer complex relational questions |
+This is my solution to the **Movies** problem from [CS50x 2024 – Week 7](https://cs50.harvard.edu/x/2024/psets/7/movies/).
 
 ---
 
-## 🎧 Songs – Week 7
+## 📝 Problem Description
 
-### 📦 Files
+In this assignment, I explore a relational database of movies using SQL to answer 13 analytical questions.  
+The database includes information about:
 
-```
-songs.db
-1.sql - 8.sql
-answers.txt
-```
+- Movies
+- People (actors, directors)
+- Ratings
+- Stars
+- Genres
 
-### 🧠 Summary
-
-This project explores musical features like **energy**, **valence**, and **danceability** to describe a listener’s **audio aura** based on their top 100 songs.
-
-Key SQL tasks:
-- Calculate averages
-- Find top/bottom ranked tracks
-- Use filtering and aggregation (`AVG`, `MAX`, `WHERE`)
-- Determine musical mood
-
-### ✅ Final Audio Aura Analysis (answers.txt)
-
-```
-Energy:       0.65
-Valence:      0.70
-Danceability: 0.60
-
-→ Energetic and Happy, with a decent level of danceability.
-```
-
-🔎 Suggested Improvements:
-- Include play counts
-- Analyze mood patterns over time
+Each `.sql` file contains the SQL query needed to answer one specific question.
 
 ---
 
-## 🎥 Movies – Week 7
-
-### 📦 Files
+## 📁 File Structure
 
 ```
-movies.db
-1.sql - 13.sql
+movies.db         # The main SQLite database
+1.sql - 13.sql    # Each file contains a query for one question
 ```
 
-### 🧠 Summary
+---
 
-This project answers 13 queries about movies, people, genres, and ratings using SQL.
+## 🧠 Topics Covered
 
-Key SQL topics used:
-- `JOIN` between multiple tables (`movies`, `people`, `stars`, etc.)
-- Filtering with `WHERE`, `IN`, `LIKE`
-- Grouping with `GROUP BY` and filtering with `HAVING`
-- Sorting results using `ORDER BY`
-- Aggregation with `COUNT`, `AVG`, `MAX`, `MIN`
+- Relational data modeling
+- Many-to-many relationships
+- SQL JOIN operations (INNER JOIN, LEFT JOIN)
+- Filtering and aggregation:
+  - `GROUP BY`, `HAVING`
+  - `ORDER BY`, `LIMIT`
+  - `COUNT`, `AVG`, `MAX`
+- Subqueries and aliases
 
-### 🔍 Sample Questions Answered
+---
 
-- What movies have the highest average ratings?
-- Which actors starred in a specific film?
-- Which directors have the most highly rated films?
-- What are the most common genres?
-- What are the top movies per decade?
+## 🧪 Example Questions Answered
 
-### 💡 Example Query
-
-```sql
-SELECT name
-FROM people
-JOIN stars ON people.id = stars.person_id
-JOIN movies ON stars.movie_id = movies.id
-WHERE movies.title = 'Inception';
-```
+- What are the highest-rated movies of a specific year?
+- Who acted in a specific movie?
+- What movies did a certain director direct?
+- Which movies have the most stars?
+- Who starred in movies of a specific genre?
 
 ---
 
 ## 🚀 How to Run
 
-To test any `.sql` file:
+1. Open your terminal or DB browser.
+2. Start SQLite:
 
 ```bash
-sqlite3 [database]
+sqlite3 movies.db
+```
+
+3. Run queries like this:
+
+```bash
 .read 1.sql
 .read 2.sql
 ...
+.read 13.sql
 ```
 
-Or open the `.db` files in **DB Browser for SQLite** and run queries there.
+You can also run queries directly in a GUI tool like [DB Browser for SQLite](https://sqlitebrowser.org/).
 
 ---
 
-## 🧠 Concepts Practiced
+## 🧠 Example Query Snippet
 
-- Relational database design
-- Writing efficient and accurate SQL queries
-- Real-world data analysis (music + film)
-- Multi-table JOINs and aggregation
-- Pattern matching and logical filtering
+```sql
+SELECT title
+FROM movies
+JOIN ratings ON movies.id = ratings.movie_id
+WHERE year = 2010
+ORDER BY rating DESC
+LIMIT 5;
+```
+
+---
+
+## 📌 Notes
+
+- Database schema was provided by CS50.
+- Queries are written for readability and modularity.
+- Some questions required advanced logic using nested subqueries or multiple JOINs.
+- Completed as part of **Harvard's CS50x – Introduction to Computer Science (2024)**.
 
 ---
 
@@ -118,4 +99,4 @@ Or open the `.db` files in **DB Browser for SQLite** and run queries there.
 
 Course: [CS50x – Harvard University](https://cs50.harvard.edu/x/)  
 Instructor: David J. Malan  
-Student: AlBaraa Mohammad AlOlabi
+Student: **AlBaraa Mohammad AlOlabi**
