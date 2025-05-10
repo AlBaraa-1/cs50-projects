@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: it is faster than section sort when it is sorted a Big O of n
+
+sort2 uses: Merge sort
+
+How do you know?: its the fastest sorting methoed between them all
+
+sort3 uses: selection sort
+
+How do you know?: its alwas a big O of n^2 the slowest even when its sorted
