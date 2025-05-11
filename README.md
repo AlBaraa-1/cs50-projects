@@ -105,8 +105,7 @@ If you're checking this repo: you're welcome to explore my journey, try out the 
 _“This is CS50. And this... was CS50x.”_
 
 [🪪 Certificate Link – _
-
 🔗 edX Certificate: https://courses.edx.org/certificates/e0d1a9ea6d6c447981e5de903192e52c
-🔗 🔗 CS50 Certificate: https://certificates.cs50.io/c143dbd9-be60-45a6-8e0c-8d36fc1d9716.pdf?size=letter
+🔗 CS50 Certificate: https://certificates.cs50.io/c143dbd9-be60-45a6-8e0c-8d36fc1d9716.pdf?size=letter
 _]
 
